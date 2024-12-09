@@ -1,22 +1,19 @@
 fun main() {
     val input = readInput("Day07")
-    var sum = 0L
-    for (equation in input.map { it.split(':') }) {
-        val result = equation[0].toLong()
-        val operands = equation[1].trim().split(' ')
-        var results = listOf(operands[0].toLong())
-        for (operand in operands.subList(1, operands.size)) {
-            results = results.flatMap {
-                listOf(
-                    it + operand.toLong(),
-                    it * operand.toLong(),
-                    (it.toString() + operand).toLong()
-                )
-            }
-        }
-        if (results.contains(result)) {
-            sum += result
-        }
-    }
+    val sum = input.asSequence()
+        .map { it.split(':') }
+        .map { Pair(it[0].toLong(), it[1].trim().split(' ')) }
+        .map {
+            Pair(it.first, it.second.subList(1, it.second.size)
+                .fold(listOf(it.second[0].toLong())) { acc, operand ->
+                    acc.flatMap { cumSum ->
+                        listOf(
+                            cumSum + operand.toLong(),
+                            cumSum * operand.toLong(),
+                            (cumSum.toString() + operand).toLong()
+                        )
+                    }
+                })
+        }.filter { it.second.contains(it.first) }.sumOf { it.first }
     println(sum)
 }
