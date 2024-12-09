@@ -21,3 +21,15 @@ fun String.md5() = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteA
 fun Any?.println() = println(this)
 
 fun <T> List<T>.middleElement() = get(size / 2)
+
+fun readInputToCharArray(name: String): Array<CharArray> = readInput(name).map { it.toCharArray() }.toTypedArray()
+
+fun Array<CharArray>.prettyPrint() {
+    for (i in indices) {
+        val array = get(i)
+        for (j in array.indices) {
+            print(array[j])
+        }
+        println("")
+    }
+}
