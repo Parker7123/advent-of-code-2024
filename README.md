@@ -1,25 +1,16 @@
-# advent-of-code-2024
+# Advent of Code 2024 Solutions
 
-Welcome to the Advent of Code[^aoc] Kotlin project created by [parker7123][github] using the [Advent of Code Kotlin Template][template] delivered by JetBrains.
+This repository contains my solutions for the **Advent of Code 2024** puzzles, written in [Kotlin](https://kotlinlang.org).
 
-In this repository, parker7123 is about to provide solutions for the puzzles using [Kotlin][kotlin] language.
+[Advent of Code](https://adventofcode.com) is an annual event featuring daily programming puzzles from December 1st to December 25th. Feel free to explore my solutions!
 
-If you're stuck with Kotlin-specific questions or anything related to this template, check out the following resources:
+## Solutions
 
-- [Kotlin docs][docs]
-- [Kotlin Slack][slack]
-- Template [issue tracker][issues]
-
-
-[^aoc]:
-    [Advent of Code][aoc] – An annual event of Christmas-oriented programming challenges started December 2015.
-    Every year since then, beginning on the first day of December, a programming puzzle is published every day for twenty-five days.
-    You can solve the puzzle and provide an answer using the language of your choice.
-
-[aoc]: https://adventofcode.com
-[docs]: https://kotlinlang.org/docs/home.html
-[github]: https://github.com/parker7123
-[issues]: https://github.com/kotlin-hands-on/advent-of-code-kotlin-template/issues
-[kotlin]: https://kotlinlang.org
-[slack]: https://surveys.jetbrains.com/s3/kotlin-slack-sign-up
-[template]: https://github.com/kotlin-hands-on/advent-of-code-kotlin-template
+- [Day 01](src/Day01.kt)
+- [Day 02](src/Day02.kt)
+- [Day 03](src/Day03.kt)
+- [Day 04](src/Day04.kt)
+- [Day 05](src/Day05.kt)
+- [Day 06](src/Day06.kt)
+- [Day 07](src/Day07.kt)
+- [Day 08](src/Day08.kt)
